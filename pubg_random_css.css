@@ -1,0 +1,54 @@
+.wrap {
+  margin: auto;
+  width: 700px;
+}
+
+.pic-cross {
+  position: relative;
+  width: 800px;
+  margin: auto;
+}
+
+.map {
+  width: 700px;
+  height: 700px;
+}
+
+.btn-area {
+  width: 700px;
+  margin: 20px 0 20px 0;
+  display: flex;
+}
+
+.btn {
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 10px 30px;
+  background-color: #4169e1;
+  color: #fff;
+  border-style: none;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  background-color: #248;
+}
+
+.title {
+  font-family: sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.pin {
+  position: absolute;
+  width: 50px;
+  top: 0px; /*y座標*/
+  left: 0px; /*x座標*/
+  visibility: hidden;
+}
+
+.sub-title {
+  font-size: 16px;
+  font-weight: bold;
+}

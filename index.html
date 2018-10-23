@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="pubg_random_css.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h1 class="title">PUBG降下地点ランダム機(Sanhok)</h1>
+
+    <div class="pic-cross">
+      <img src="pubg.jpg" alt="" class="map">
+      <img src="pin5.png" alt="" id="pin" class="pin">
+    </div>
+
+    <div class="btn-area">
+      <button onclick="cityRandom()" class="btn">街ランダム</button>
+      <button onclick="notBattleField()" class="btn">街ランダム(激戦区なし)</button>
+    </div>
+
+    <div id="a"></div>
+    <div id="b"></div>
+  </div>
+
+  <script>
+    let pin = document.getElementById("pin");
+    let yCoor = 0;
+    let xCoor = 0;
+    let townCoordinateValue = [
+      ["160px", "212px"], //hatinh
+      ["248px", "124px"], //CampAlpha
+      ["405px", "198px"], //Ruins
+      ["458px", "133px"], //Tambang
+      ["528px", "183px"], //Na kharo
+      ["580px", "242px"], //Sanmee
+      ["433px", "315px"], //PaiNan
+      ["300px", "324px"], //Bootcamp
+      ["200px", "423px"], //paradise
+      ["90px", "390px"], //khao
+      ["130px", "370px"], //tat mok
+      ["95px", "536px"], //mongnai
+      ["234px", "583px"], //campBravo
+      ["347px", "589px"], //lakawi
+      ["447px", "579px"], //kampong
+      ["560px", "560px"], //Docks
+      ["400px", "454px"], //Quarry
+      ["490px", "447px"], //Cave
+      ["558px", "398px"], //CampCharlie
+      ["603px", "398px"], //BanTai
+    ];
+
+    let init = () => {
+      pin.style.visibility = "visible";
+      townCoordinateValue.shuffle();
+      yCoor = townCoordinateValue[0][0];
+      xCoor = townCoordinateValue[0][1];
+    }
+
+    let cityRandom = () => {
+      init();
+      pin.style.top = yCoor;
+      pin.style.left = xCoor;
+    }
+
+    let notBattleField = () => {
+      init();
+      if (yCoor == "300px" || yCoor == "200px" || yCoor == "405px") {
+        init();
+        notBattleField();
+      }
+      pin.style.top = yCoor;
+      pin.style.left = xCoor;
+    }
+
+
+    Array.prototype.shuffle = function() {
+      let w = this.length;
+      while (w) {
+        let j = Math.floor(Math.random() * w);
+        let t = this[--w];
+        this[w] = this[j];
+        this[j] = t;
+      }
+    }
+  </script>
+</body>
+
+</html>
