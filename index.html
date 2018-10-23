@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>PUBG降下地点ランダム機</title>
   <link rel="stylesheet" href="pubg_random_css.css">
 </head>
 
@@ -17,8 +17,8 @@
     </div>
 
     <div class="btn-area">
-      <button onclick="cityRandom()" class="btn">街ランダム</button>
-      <button onclick="notBattleFieldRandom()" class="btn">街ランダム(激戦区なし)</button>
+      <button onclick="cityRandom()" class="btn">街のみ</button>
+      <button onclick="notBattleFieldRandom()" class="btn">街のみ(激戦区なし)</button>
       <button onclick="depopulateRandom()" class="btn">過疎地のみ</button>
     </div>
 
@@ -137,9 +137,7 @@
       if(yCoor === prevValue) {
         cityRandom();
       }
-      pin.style.top = yCoor;
-      pin.style.left = xCoor;
-      prevValue = yCoor;
+      updatePinValue();
     }
 
     let notBattleFieldRandom = () => {
@@ -147,15 +145,21 @@
       if (yCoor === PARADISE_Y || yCoor === RUINS_Y || yCoor === BOOTCAMP_Y || yCoor === PAINAN_Y || yCoor === prevValue) {
         notBattleFieldRandom();
       }
-      pin.style.top = yCoor;
-      pin.style.left = xCoor;
-      prevValue = yCoor;
+      updatePinValue();
     }
 
     let depopulateRandom = () => {
       init("depopulate");
+      if(yCoor === prevValue) {
+        depopulateRandom();
+      }
+      updatePinValue();
+    }
+
+    let updatePinValue = () => {
       pin.style.top = yCoor;
       pin.style.left = xCoor;
+      prevValue = yCoor;
     }
 
     Array.prototype.shuffle = function() {
