@@ -91,14 +91,14 @@ let depopulatedCoordinateValue = [
   //本島
 ]
 
-let init = (x) => {
+let init = (configName) => {
   pin.style.visibility = "visible";
   townCoordinateValue.shuffle();
   depopulatedCoordinateValue.shuffle();
-  if (x === "city") {
+  if (configName === "city") {
     yCoor = townCoordinateValue[0][0];
     xCoor = townCoordinateValue[0][1];
-  } else if (x === "depopulate") {
+  } else if (configName === "depopulate") {
     yCoor = depopulatedCoordinateValue[0][0];
     xCoor = depopulatedCoordinateValue[0][1];
   }
