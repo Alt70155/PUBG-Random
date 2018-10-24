@@ -1,11 +1,12 @@
-let pin = document.getElementById("pin");
+"use strict";
+
 let yCoor = 0;
 let xCoor = 0;
 let prevValue = 0;
-let BOOTCAMP_Y = "300px";
-let PARADISE_Y = "200px";
-let PAINAN_Y = "433px";
-let RUINS_Y = "405px";
+const BOOTCAMP_Y = "300px";
+const PARADISE_Y = "200px";
+const PAINAN_Y = "433px";
+const RUINS_Y = "405px";
 
 //街座標
 let townCoordinateValue = [
@@ -92,6 +93,7 @@ let depopulatedCoordinateValue = [
 ]
 
 let init = (configName) => {
+  let pin = document.getElementById("pin");
   pin.style.visibility = "visible";
   townCoordinateValue.shuffle();
   depopulatedCoordinateValue.shuffle();
@@ -129,6 +131,7 @@ let depopulateRandom = () => {
 }
 
 let updatePinValue = () => {
+  let pin = document.getElementById("pin");
   pin.style.top = yCoor;
   pin.style.left = xCoor;
   prevValue = yCoor;
