@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <button onclick="init()">ピンを指す</button>
-    <form id="target">
-      <input name="radiobtn" type="radio" value="a"> 街ランダム<br>
-      <input name="radiobtn" type="radio" value="b"> 街ランダム(激戦区なし)<br>
-      <input name="radiobtn" type="radio" value="c"> 過疎地のみ
-    </form>
-    <div id="a"></div>
-    <script>
-    let init = () => {
-      let elem = document.getElementById("target");
-      let radioNodeList = elem.radiobtn;
-      let radioValue = radioNodeList.value;
-      let ct = 0;
-      if(radioValue === ""){
-        document.write("選択されていません");
-      } else if(radioValue === "a") {
-        document.getElementById("a").textContent = ct;
-        ct++;
-      } else if(radioValue === "b") {
-        notBattleFieldRandom();
-      } else if(radioValue === "c") {
-        depopulateRandom();
-      }
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    let arr = [];
+    document.getElementById("pic-cross").addEventListener("click", function(event) {
+      var clickX = event.pageX;
+      var clickY = event.pageY;
+
+      // 要素の位置を取得
+      var clientRect = this.getBoundingClientRect();
+      var positionX = clientRect.left + window.pageXOffset;
+      var positionY = clientRect.top + window.pageYOffset;
+
+      // 要素内におけるクリック位置を計算
+      var x = clickX - positionX - 12;
+      var y = clickY - positionY - 41;
+      console.log(x, y);
+      arr.push("[\"" + y + "px\", \"" + x + "px\"]");
+    });
+
+    let disp = () => {
+      document.write(arr);
     }
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
