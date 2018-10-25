@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    .wrap {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .flex {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+    }
+
+    li {
+      width: 200px;
+      height: 50px;
+      /*border: 1px solid black;*/
+      text-align: center;
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding-top: 25px;
+      /*border-left: 1px solid rgba( 0, 0, 0, 0);*/
+    }
+
+    .flex li:first-child {
+      border-left: 1px solid rgba( 0, 0, 0, 1);
+    }
+
+    li:hover {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <ul class="flex">
+      <li>element</li>
+      <li>element</li>
+      <li>element</li>
+      <li>element</li>
+    </ul>
+  </div>
+</body>
+
+</html>
