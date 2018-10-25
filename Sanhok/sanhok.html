@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>PUBG降下地点ランダム機</title>
+  <link rel="stylesheet" href="../pubg_random_css.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h1 class="title">PUBG降下地点ランダム機(Sanhok)</h1>
+
+    <div id="pic-cross" class="pic-cross">
+      <img src="../images/pubg.jpg" alt="" class="map">
+      <img src="../images/pin5.png" alt="" id="pin" class="pin">
+    </div>
+
+    <div class="btn-area">
+      <button onclick="sanhokCityRand()" class="btn">街のみ</button>
+      <button onclick="sanhokNotBattleFieldRand()" class="btn">街のみ(激戦区なし)</button>
+      <button onclick="sanhokDepopulateRand()" class="btn">過疎地のみ</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="sanhok_coor.js"></script>
+  <script type="text/javascript" src="../pubg_random.js"></script>
+</body>
+
+</html>
