@@ -1,5 +1,5 @@
 //街座標
-let townCoordinateValue = [
+const townCoordinateValue = [
   ["160px", "212px"], //hatinh
   ["248px", "124px"], //CampAlpha
   ["405px", "198px"], //Ruins
@@ -22,7 +22,7 @@ let townCoordinateValue = [
   ["603px", "398px"], //BanTai
 ];
 //過疎地座標
-let depopulatedCoordinateValue = [
+const depopulatedCoordinateValue = [
   ["120px", "216.5px"],
   ["295px", "85.5px"],
   ["344px", "67.5px"],
@@ -81,3 +81,8 @@ let depopulatedCoordinateValue = [
   ["506px", "529px"]
   //本島
 ]
+//激戦区
+const BOOTCAMP_Y = "300px";
+const PARADISE_Y = "200px";
+const PAINAN_Y = "433px";
+const RUINS_Y = "405px";
