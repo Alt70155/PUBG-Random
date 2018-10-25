@@ -92,22 +92,26 @@ const RUINS_Y = "405px";
 //   //本島
 // ]
 
-let init = (configName) => {
+let init = (configName, coorArray) => {
   let pin = document.getElementById("pin");
   pin.style.visibility = "visible";
-  if (configName === "city") {
-    townCoordinateValue.shuffle();
-    yCoor = townCoordinateValue[0][0];
-    xCoor = townCoordinateValue[0][1];
-  } else if (configName === "depopulate") {
-    depopulatedCoordinateValue.shuffle();
-    yCoor = depopulatedCoordinateValue[0][0];
-    xCoor = depopulatedCoordinateValue[0][1];
-  }
+  coorArray.shuffle();
+  yCoor = coorArray[0][0];
+  xCoor = coorArray[0][1];
+  // switch (configName) {
+  //   case "city":
+  //     yCoor = townCoordinateValue[0][0];
+  //     xCoor = townCoordinateValue[0][1];
+  //     break;
+  //   case "depopulate":
+  //     yCoor = depopulatedCoordinateValue[0][0];
+  //     xCoor = depopulatedCoordinateValue[0][1];
+  //     break;
+  // }
 }
 
 let sanhokCityRand = () => {
-  init("city");
+  init("city", townCoordinateValue);
   if (yCoor === prevValue) {
     sanhokCityRand();
   }
@@ -115,7 +119,7 @@ let sanhokCityRand = () => {
 }
 
 let sanhokNotBattleFieldRand = () => {
-  init("city");
+  init("city", townCoordinateValue);
   if (yCoor === PARADISE_Y || yCoor === RUINS_Y || yCoor === BOOTCAMP_Y || yCoor === PAINAN_Y || yCoor === prevValue) {
     sanhokNotBattleFieldRand();
   }
@@ -123,7 +127,7 @@ let sanhokNotBattleFieldRand = () => {
 }
 
 let sanhokDepopulateRand = () => {
-  init("depopulate");
+  init("depopulate", depopulatedCoordinateValue);
   if (yCoor === prevValue) {
     sanhokDepopulateRand();
   }
