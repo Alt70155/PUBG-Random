@@ -13,7 +13,7 @@ let init = (coorArray) => {
 }
 
 let sanhokCityRand = () => {
-  init(townCoordinateValue);
+  init(SANHOKTOWNCOORVAL);
   if (yCoor === prevValue) {
     sanhokCityRand();
   }
@@ -21,7 +21,7 @@ let sanhokCityRand = () => {
 }
 
 let sanhokNotBattleFieldRand = () => {
-  init(townCoordinateValue);
+  init(SANHOKTOWNCOORVAL);
   if (yCoor === PARADISE_Y || yCoor === RUINS_Y || yCoor === BOOTCAMP_Y || yCoor === PAINAN_Y || yCoor === prevValue) {
     sanhokNotBattleFieldRand();
   }
@@ -29,7 +29,7 @@ let sanhokNotBattleFieldRand = () => {
 }
 
 let sanhokDepopulateRand = () => {
-  init(depopulatedCoordinateValue);
+  init(SANHOKDEPOCOORVAL);
   if (yCoor === prevValue) {
     sanhokDepopulateRand();
   }
@@ -37,9 +37,17 @@ let sanhokDepopulateRand = () => {
 }
 
 let erangelCityRand = () => {
-  init(erangelTownCoorVal);
+  init(ERANGELTOWNCOORVAL);
   if (yCoor === prevValue) {
     erangelCityRand();
+  }
+  updatePinValue();
+}
+
+let erangelNotBattleFieldRand = () => {
+  init(ERANGELTOWNCOORVAL);
+  if (yCoor === YASUNAYA_Y || yCoor === SCHOOL_Y || yCoor === POCHINKI_Y || yCoor === MILITARY_Y || yCoor === prevValue) {
+    erangelNotBattleFieldRand();
   }
   updatePinValue();
 }

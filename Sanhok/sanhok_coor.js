@@ -1,5 +1,5 @@
 //街座標
-const townCoordinateValue = [
+const SANHOKTOWNCOORVAL = [
   ["160px", "212px"], //hatinh
   ["248px", "124px"], //CampAlpha
   ["405px", "198px"], //Ruins
@@ -22,7 +22,7 @@ const townCoordinateValue = [
   ["603px", "398px"], //BanTai
 ];
 //過疎地座標
-const depopulatedCoordinateValue = [
+const SANHOKDEPOCOORVAL = [
   ["120px", "216.5px"],
   ["295px", "85.5px"],
   ["344px", "67.5px"],
