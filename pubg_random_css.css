@@ -1,13 +1,27 @@
 @charset "utf-8";
-
 body {
-  width: 850px;
+  width: 800px;
   min-height: 950px;
   max-height: auto;
   margin: auto;
-  border-left: 0.5px solid black;
-  border-right: 0.5px solid black;
-  border-bottom: 0.5px solid black;
+}
+
+.background-style {
+  background-image: url(images/pubg-pic.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 460px;
+  min-height: 900px;
+  overflow-x: scroll;
+}
+
+.container {
+  width: 800px;
+  max-height: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+
 }
 
 .wrap {
@@ -42,9 +56,10 @@ body {
   font-size: 1.3em;
   font-weight: bold;
   padding: 10px 30px;
-  background-color: #4169e1;
-  color: #fff;
-  border-style: none;
+  background-color: #d2691e;
+  color: black;
+  border: 1.5px solid black;
+
 }
 
 .btn-er {
@@ -59,17 +74,28 @@ body {
   font-family: sans-serif;
   margin-top: 0px;
   margin-bottom: 0px;
+  color: #ff8c00;
+  text-shadow: 1px 1px 0 #000,
+             -1px 1px 0 #000,
+             1px -1px 0 #000,
+             -1px -1px 0 #000;
 }
 
 .pin {
   position: absolute;
   width: 50px;
-  top: 0px; /*y座標*/
-  left: 0px; /*x座標*/
+  top: 0px;
+  /*y座標*/
+  left: 0px;
+  /*x座標*/
   visibility: hidden;
 }
 
 .sub-title {
   font-size: 16px;
   font-weight: bold;
+}
+
+.description-area {
+  color: white;
 }
