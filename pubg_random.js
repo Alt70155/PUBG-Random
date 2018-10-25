@@ -46,7 +46,7 @@ let erangelCityRand = () => {
 
 let erangelNotBattleFieldRand = () => {
   init(ERANGELTOWNCOORVAL);
-  if (yCoor === YASUNAYA_Y || yCoor === SCHOOL_Y || yCoor === POCHINKI_Y || yCoor === MILITARY_Y || yCoor === prevValue) {
+  if (yCoor === YASUNAYA_Y || yCoor === SCHOOL_Y || yCoor === POCHINKI_Y || yCoor === MILITARY_Y || yCoor === SCHOOL2_Y || yCoor === prevValue) {
     erangelNotBattleFieldRand();
   }
   updatePinValue();

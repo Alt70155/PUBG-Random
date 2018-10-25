@@ -2,7 +2,8 @@
 
 body {
   width: 850px;
-  height: 850px;
+  min-height: 950px;
+  max-height: auto;
   margin: auto;
   border-left: 0.5px solid black;
   border-right: 0.5px solid black;
@@ -32,6 +33,11 @@ body {
   justify-content: space-between;
 }
 
+.btn-area2 {
+  width: 700px;
+  margin: 20px 0 20px 0;
+}
+
 .btn {
   font-size: 1.3em;
   font-weight: bold;
@@ -39,6 +45,10 @@ body {
   background-color: #4169e1;
   color: #fff;
   border-style: none;
+}
+
+.btn-er {
+  margin-left: 30px;
 }
 
 .btn:hover {

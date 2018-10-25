@@ -12,7 +12,7 @@ const ERANGELTOWNCOORVAL = [
   ["187px", "455px"], //9
   ["234px", "337px"],
   ["265px", "351px"], //11
-  ["277px", "364px"],
+  ["277px", "364px"], //12
   ["327px", "175px"],
   ["340px", "300px"], //14
   ["321px", "476px"],
@@ -33,3 +33,4 @@ const YASUNAYA_Y = "187px";
 const SCHOOL_Y = "265px";
 const POCHINKI_Y = "340px";
 const MILITARY_Y = "558px";
+const SCHOOL2_Y = "277px";
