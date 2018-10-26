@@ -12,6 +12,7 @@ let init = (coorArray) => {
   xCoor = coorArray[0][1];
 }
 
+//sanhokFunc
 let sanhokCityRand = () => {
   init(SANHOKTOWNCOORVAL);
   if (yCoor === prevValue) {
@@ -36,6 +37,7 @@ let sanhokDepopulateRand = () => {
   updatePinValue();
 }
 
+//erangelFunc
 let erangelCityRand = () => {
   init(ERANGELTOWNCOORVAL);
   if (yCoor === prevValue) {
@@ -48,6 +50,14 @@ let erangelNotBattleFieldRand = () => {
   init(ERANGELTOWNCOORVAL);
   if (yCoor === YASUNAYA_Y || yCoor === SCHOOL_Y || yCoor === POCHINKI_Y || yCoor === MILITARY_Y || yCoor === SCHOOL2_Y || yCoor === prevValue) {
     erangelNotBattleFieldRand();
+  }
+  updatePinValue();
+}
+
+let miramarCityRand = () => {
+  init(MIRAMARTOWNCOORVAL);
+  if (yCoor === prevValue) {
+    miramarCityRand();
   }
   updatePinValue();
 }
