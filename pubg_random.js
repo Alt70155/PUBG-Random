@@ -4,12 +4,12 @@ let yCoor = 0;
 let xCoor = 0;
 let prevValue = 0;
 
-let init = (coorArray) => {
+let init = (coordinatesArray) => {
   let pin = document.getElementById("pin");
   pin.style.visibility = "visible";
-  coorArray.shuffle();
-  yCoor = coorArray[0][0];
-  xCoor = coorArray[0][1];
+  coordinatesArray.shuffle();
+  yCoor = coordinatesArray[0][0];
+  xCoor = coordinatesArray[0][1];
 }
 
 //sanhokFunc
@@ -23,7 +23,9 @@ let sanhokCityRand = () => {
 
 let sanhokNotBattleFieldRand = () => {
   init(SANHOKTOWNCOORVAL);
-  if (yCoor === PARADISE_Y || yCoor === RUINS_Y || yCoor === BOOTCAMP_Y || yCoor === PAINAN_Y || yCoor === prevValue) {
+  //特定の座標の場合やり直し
+  if (yCoor === prevValue || yCoor === PARADISE_Y || yCoor === RUINS_Y ||
+     yCoor === BOOTCAMP_Y || yCoor === PAINAN_Y) {
     sanhokNotBattleFieldRand();
   }
   updatePinValue();
@@ -48,8 +50,8 @@ let erangelCityRand = () => {
 
 let erangelNotBattleFieldRand = () => {
   init(ERANGELTOWNCOORVAL);
-  if (yCoor === YASUNAYA_Y || yCoor === SCHOOL_Y || yCoor === POCHINKI_Y || yCoor === MILITARY_Y || yCoor === MANSHION_Y ||
-     yCoor === prevValue) {
+  if (yCoor === YASUNAYA_Y || yCoor === SCHOOL_Y || yCoor === POCHINKI_Y ||
+     yCoor === MILITARY_Y || yCoor === MANSHION_Y || yCoor === prevValue) {
     erangelNotBattleFieldRand();
   }
   updatePinValue();
@@ -66,8 +68,8 @@ let miramarCityRand = () => {
 
 let miramarNotBattleFieldRand = () => {
   init(MIRAMARTOWNCOORVAL);
-  if (yCoor === prevValue || yCoor === ELPOZO_Y || yCoor === SANMARTIN_Y || yCoor === DELPATRON_Y || yCoor === ELAZAHAR_Y ||
-     yCoor === LOSLEONES_Y || yCoor === PECADO_Y) {
+  if (yCoor === prevValue || yCoor === ELPOZO_Y || yCoor === SANMARTIN_Y || yCoor === DELPATRON_Y ||
+     yCoor === ELAZAHAR_Y || yCoor === LOSLEONES_Y || yCoor === PECADO_Y) {
        miramarNotBattleFieldRand();
      }
   updatePinValue();
@@ -77,9 +79,12 @@ let updatePinValue = () => {
   let pin = document.getElementById("pin");
   pin.style.top = yCoor;
   pin.style.left = xCoor;
+  //前回のピンのy座標を保持
   prevValue = yCoor;
 }
 
+
+//Fisher–Yatesアルゴリズムの配列シャッフル
 Array.prototype.shuffle = function() {
   let w = this.length;
   while (w) {
