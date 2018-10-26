@@ -33,4 +33,4 @@ const YASUNAYA_Y = "187px";
 const SCHOOL_Y = "265px";
 const POCHINKI_Y = "340px";
 const MILITARY_Y = "558px";
-const SCHOOL2_Y = "277px";
+const MANSHION_Y = "277px";

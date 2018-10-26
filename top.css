@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 600px;
+  min-height: 950px;
+  margin: auto;
+}
+
+.background-style {
+  background-image: url(images/pubg-pic.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 460px;
+  min-height: 950px;
+  overflow-x: scroll;
+}
+
+.contents-nav {
+  width: 550px;
+  height: 500px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.contents-nav img {
+  width: 550px;
+  height: 100px;
+  margin-bottom: 30px;
+}
