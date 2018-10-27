@@ -5,7 +5,16 @@ body {
   padding: 0;
   min-width: 600px;
   min-height: 950px;
+}
+
+.container {
+  width: 700px;
   margin: auto;
+  min-height: 800px;
+  max-height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #d2691e;
+  border-top: none;
 }
 
 .background-style {
@@ -21,13 +30,29 @@ body {
 
 .contents-nav {
   width: 550px;
-  height: 500px;
+  height: 700px;
   border: 1px solid black;
   margin: auto;
+  margin-bottom: 50px;
 }
 
 .contents-nav img {
   width: 550px;
-  height: 100px;
+  height: 130px;
+  margin-bottom: 50px;
+}
+
+.title {
+  margin: auto;
   margin-bottom: 30px;
+  padding-top: 30px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.title img {
+
+  width: 300px;
+  height: 100px;
+
 }
