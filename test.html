@@ -5,83 +5,24 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="pubg_random_css.css">
   <style media="screen">
-    .pin {
-      top: 0;
-      left: 0;
-    }
+  .er-box {
+    position: relative;
+  }
+
+  .er-box p {
+    position: absolute;
+    color: white;
+  }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <h1 class="title">PUBG降下地点ランダム機・Erangel</h1>
-    <div id="pic-cross" class="pic-cross">
-      <img src="./images/miramar.jpg" alt="" class="map">
-      <img src="./images/pin5.png" alt="" id="pin1" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin2" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin3" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin4" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin5" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin6" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin7" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin8" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin9" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin10" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin11" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin12" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin13" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin14" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin15" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin16" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin17" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin18" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin19" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin20" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin21" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin22" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin23" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin24" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin25" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin26" class="pin">
-      <img src="./images/pin5.png" alt="" id="pin27" class="pin">
+          <div class="er-box">
+            <img src="images/erangel-top.jpg" alt="">
+            <p>Erangel</p>
+          </div>
 
-    </div>
-
-    <button type="button" name="button" onclick="disp()">push</button>
-
-  </div>
-  <script>
-    let arr = [];
-    let ct = 1;
-    document.getElementById("pic-cross").addEventListener("click", function(event) {
-      var clickX = event.pageX;
-      var clickY = event.pageY;
-
-      // 要素の位置を取得
-      var clientRect = this.getBoundingClientRect();
-      var positionX = clientRect.left + window.pageXOffset;
-      var positionY = clientRect.top + window.pageYOffset;
-
-      // 要素内におけるクリック位置を計算
-      var x = clickX - positionX - 12;
-      var y = clickY - positionY - 41;
-      console.log(x, y);
-      arr.push("[\"" + y + "px\", \"" + x + "px\"]");
-      let pin = document.getElementById("pin" + ct);
-      pin.style.visibility = "visible";
-      y = Math.floor(y);
-      x = Math.floor(x);
-      pin.style.top = y;
-      pin.style.left = x;
-      ct++;
-    });
-
-    let disp = () => {
-      document.write(arr);
-    }
-  </script>
 </body>
 
 </html>

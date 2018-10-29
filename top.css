@@ -47,12 +47,29 @@ body {
   margin-bottom: 30px;
   padding-top: 30px;
   width: 300px;
-  border: 1px solid black;
 }
 
 .title img {
-
   width: 300px;
   height: 100px;
+}
 
+
+.er-box {
+  position: relative;
+}
+
+.er-title {
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  border: 1px solid black;
+  position: absolute;
+  color: white;
+  font-size: 80px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
