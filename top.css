@@ -2,12 +2,15 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 600px;
+}
+
+.container,.contents-nav,.title,.sub-title,.description-area {
+  margin: auto;
 }
 
 .container {
   width: 700px;
-  margin: auto;
+  min-width: 700px;
   min-height: 1050px;
   background-color: rgba(0, 0, 0, 0.7);
   border: 5px solid #d2691e;
@@ -32,7 +35,6 @@ body {
 .contents-nav {
   width: 550px;
   height: 550px;
-  margin: auto;
   margin-bottom: 50px;
 }
 
@@ -48,7 +50,6 @@ body {
 }
 
 .title {
-  margin: auto;
   margin-bottom: -10px;
   padding-top: 40px;
   width: 300px;
@@ -84,7 +85,6 @@ body {
 
 .sub-title {
   width: 535px;
-  margin: auto;
   color: #d2691e;
   text-align: center;
   margin-bottom: 20px;
@@ -98,7 +98,6 @@ body {
 .description-area {
   width: 535px;
   height: auto;
-  margin: auto;
   margin-bottom: 50px;
   font-family: sans-serif;
   border: 3px solid white;
@@ -119,4 +118,5 @@ footer {
   background-color: rgb(25, 25, 25);
   color: white;
   text-align: center;
+  font-size: 14px;
 }
