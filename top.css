@@ -114,9 +114,9 @@ body {
 
 footer {
   margin-bottom: 0;
-  height: 110px;
-  line-height: 110px;
-  background-color: rgb(45, 45, 45);
+  height: 100px;
+  line-height: 100px;
+  background-color: rgb(35, 35, 35);
   color: white;
   text-align: center;
 }
