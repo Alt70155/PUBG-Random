@@ -31,7 +31,7 @@ body {
 
 .contents-nav {
   width: 550px;
-  height: 500px;
+  height: 550px;
   margin: auto;
   margin-bottom: 50px;
 }
@@ -100,6 +100,7 @@ body {
   height: auto;
   margin: auto;
   margin-bottom: 50px;
+  font-family: sans-serif;
   border: 3px solid white;
   border-radius: 10px;
   background-color: black;
@@ -109,4 +110,13 @@ body {
 
 .description-area li {
   color: white;
+}
+
+footer {
+  margin-bottom: 0;
+  height: 110px;
+  line-height: 110px;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  text-align: center;
 }
